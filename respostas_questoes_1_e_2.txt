@@ -1,0 +1,44 @@
+﻿
+QUESTAO 1:
+Quais as vantagens de se trabalhar com Programacao Orientada a Objetos? Justifique
+sua resposta apresentando as principais diferencas entre Programacao Orientada a
+Objetos e Programacao Estruturada.
+
+RESPOSTA:
+A principal vantagem da POO e conseguir modelar o sistema pensando em entidades
+do mundo real (como Aluno, Conta ou Curso), tornando o codigo mais organizado,
+facil de manter e simples de reaproveitar.
+
+A principal diferenca para a Programacao Estruturada esta na forma como os dados
+e as funcoes sao organizados:
+
+- Na Programacao Estruturada, o foco e a sequencia de passos (procedimentos), e os
+  dados ficam separados das funcoes. As informacoes transitam abertamente por
+  parametros ou variaveis globais. Em projetos maiores, isso dificulta rastrear
+  quem alterou qual dado e aumenta o risco de efeitos colaterais.
+
+- Na POO, os atributos (dados) e metodos (comportamentos) ficam encapsulados
+  juntos na mesma classe. Uma funcao externa nao altera o estado de um objeto
+  diretamente; ela precisa solicitar essa alteracao atraves de metodos do proprio
+  objeto. Isso garante a integridade dos dados, isola responsabilidades e permite
+  evoluir o sistema sem quebrar partes antigas.
+
+--------------------------------------------------------------------------------
+
+QUESTAO 2:
+Defina e explique o pilar de Abstracao da Programacao Orientada a Objetos.
+
+RESPOSTA:
+Abstracao e a capacidade de observar uma entidade do mundo real e extrair apenas
+as caracteristicas e comportamentos essenciais para o contexto da aplicacao,
+descartando os detalhes irrelevantes.
+
+Na pratica, a abstracao funciona como um filtro na definicao das classes:
+- Em um sistema academico, para a classe Aluno importa saber matricula, nome,
+  cpf e curso, alem de acoes como matricular() e trancarMatricula().
+- Detalhes como cor dos olhos, altura ou preferencias pessoais existem no mundo
+  real, mas sao ignorados porque nao tem utilidade para o sistema.
+
+Assim, a abstracao reduz a complexidade do software, focando apenas no que gera
+valor para as regras de negocio.
+

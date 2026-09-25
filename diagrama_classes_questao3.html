@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Diagrama de Classes - Questão 3 (Horizontal B&W)</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>mermaid.initialize({startOnLoad:true, theme:'neutral'});</script>
+</head>
+<body style="display:flex; justify-content:center; align-items:center; min-height:100vh; background:#ffffff; margin:0; font-family: sans-serif;">
+  <div class="mermaid">
+classDiagram
+    direction LR
+    class Faculdade {
+        -String nome
+        -String cnpj
+        -String endereco
+        -String telefone
+        -List~Curso~ cursos
+        +adicionarCurso(Curso curso) void
+        +emitirRelatorio() void
+    }
+
+    class Curso {
+        -String codigo
+        -String nome
+        -int cargaHoraria
+        -String modalidade
+        -List~Aluno~ alunos
+        +matricularAluno(Aluno aluno) void
+        +exibirInformacoes() void
+    }
+
+    class Aluno {
+        -String matricula
+        -String nome
+        -String cpf
+        -String email
+        -Curso curso
+        +vincularCurso(Curso curso) void
+        +trancarMatricula() void
+    }
+
+    Faculdade "1" o-- "1..*" Curso : oferece
+    Curso "1" o-- "0..*" Aluno : matricula
+    Aluno "0..*" --> "1" Curso : estuda em
+  </div>
+</body>
+</html>

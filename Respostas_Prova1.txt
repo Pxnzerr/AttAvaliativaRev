@@ -1,0 +1,69 @@
+
+
+public class NomeDaClasse {
+
+  
+    // Formato: modificador tipoDaVariavel nomeDaVariavel;
+    public int variavelInteiro;
+    public String variavelTexto;
+    public String variavelTipo;
+    public double variavelDecimal;
+
+
+
+    // Formato: public NomeDaClasse() { }
+    public NomeDaClasse() {
+    }
+
+
+
+    // Formato: public NomeDaClasse(tipo variavel, tipo variavel, ...) { }
+    public NomeDaClasse(int variavelInteiro, String variavelTexto, String variavelTipo, double variavelDecimal) {
+        this.variavelInteiro = variavelInteiro;
+        this.variavelTexto = variavelTexto;
+        this.variavelTipo = variavelTipo;
+        this.variavelDecimal = variavelDecimal;
+    }
+
+
+   
+    // Formato: public tipoRetorno NomeMetodo(parametrosOpcionais) { }
+    public void NomeMetodo1() {
+        System.out.println("mensagem ou acao executada");
+    }
+
+    public void NomeMetodo2() {
+        System.out.println("mensagem ou acao executada");
+    }
+}
+
+
+
+2MainQuestao4
+
+package nomeDoPacote;
+
+public class NomeDaClasseMain {
+
+    
+    public static void main(String[] args) {
+
+
+        // Formato: NomeDaClasse nomeObjeto = new NomeDaClasse(valor1, valor2, ...);
+        NomeDaClasse objeto1 = new NomeDaClasse(1, "Texto Exemplo", "Tipo A", 100.0);
+
+     
+        // Formato: nomeObjeto.variavel = valor;
+        NomeDaClasse objeto2 = new NomeDaClasse();
+        objeto2.variavelInteiro = 2;
+        objeto2.variavelTexto = "Outro Texto";
+        objeto2.variavelDecimal = 200.0;
+
+        // Formato: nomeObjeto.NomeMetodo();
+        objeto1.NomeMetodo1();
+        objeto1.NomeMetodo2();
+
+        objeto2.NomeMetodo1();
+    }
+}
+
